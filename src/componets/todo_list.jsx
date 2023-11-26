@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './todo_list.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const Todo = () => {
   const [data, setData] = useState([]);
@@ -8,10 +10,13 @@ const Todo = () => {
   const clicked = () => {
     const newWord = inputRef.current.value;
 
-    if (newWord!== "") {
+    if (newWord !== "") {
       setData(prevData => [...prevData, newWord]);
       inputRef.current.value = "";
     }
+  };
+  const removeItem = (index) => {
+    setData(prevData => prevData.filter((_, i) => i !== index));
   };
 
   return (
@@ -23,11 +28,11 @@ const Todo = () => {
           <input className="inputbox" type="text" placeholder="Enter Your activity" ref={inputRef} />
           <button className="tick" onClick={clicked}>✔</button>
         </div>
-        <ol className="activityList">
-          {data.map((activity, index) => (
-            <li key={index}>{activity}</li>
+        <ul className="activityList">
+          {data.map((items, index) => (
+            <li key={index}>{items} < FontAwesomeIcon icon={faXmark} onClick={() => removeItem(index)} /></li>
           ))}
-        </ol>
+        </ul>
       </div>
     </div>
   );

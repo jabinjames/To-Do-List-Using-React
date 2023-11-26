@@ -1,73 +1,96 @@
-body{
+body {
     background-color: #0d1137;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    top:50px;
+    top: 50px;
     background-color: #3498db;
     animation: gradientTransition 5s linear infinite;
 
 }
+
 @keyframes gradientTransition {
-    0% { background-color: #22092C; }
-    50% { background-color: #321E1E; }
-    100% { background-color: #180A0A; }
-  }
-.firstbox{
-    
+    0% {
+        background-color: #22092C;
+    }
+
+    50% {
+        background-color: #321E1E;
+    }
+
+    100% {
+        background-color: #180A0A;
+    }
+}
+
+.firstbox {
+
     background-color: #e74d83;
     height: 555px;
-    width:444px ;
+    /* max-width: max-content; */
+    width: 444px;
     border-radius: 20px;
 }
-.secondbox h2{
-    color:#FFF323;
+
+.secondbox h2 {
+    color: #FFF323;
     display: flex;
     justify-content: center;
     position: relative;
-    top:10px;
-   
+    top: 10px;
+
 }
 
-.inputbox{
+.inputbox {
     position: relative;
-    top:111px;
+    top: 111px;
     left: 21px;
     width: 333px;
     display: flex;
     justify-content: center;
     align-items: center;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding:10px;
-      font-size: 16px;
-     
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+
 }
-.tick{
+
+.tick {
     position: relative;
-    top:72px;
+    top: 72px;
     left: 391px;
-    padding:10px;
+    padding: 10px;
     border-radius: 10px;
     outline: none;
     /* font-size: larger; */
 }
-.tick:hover{
+
+.tick:hover {
     cursor: pointer;
     background-color: #7fc8c1;
- 
+
 }
-.secondbox ol{
+
+.secondbox ul {
 
     position: relative;
-    top:60px;
-    font-size:24px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-    display:flex;
+    top: 60px;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+
+.activityList li {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 16px;
+    cursor: pointer;
 }
